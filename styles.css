@@ -197,3 +197,32 @@ header nav {
     border: 4px solid #ffffff;
     outline: 2px solid #43a1ff;
 }
+
+/* mobile */
+@media(max-width: 480px) {
+
+    #navbar li {
+        display: none;
+    }
+
+    #navbar #logo {
+        display: flex;
+    }
+
+    #bottom-header-links a {
+        display: none;
+    }
+
+    #bottom-header-links .btn {
+        display: flex;
+    } 
+
+    #description,
+    ul {
+        padding: 0 2rem;
+    }
+
+    #main-content #subtitle {
+        font-size: 3rem;
+    }
+}
