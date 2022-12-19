@@ -1,4 +1,12 @@
 /* General */
+:root {
+    --light-color: #ffffff;
+    --medium-color: #f5f5f7;
+    --dark-color: #333333;
+    --extra-dark-color: #1d1d1d;
+    --accent-color: #0071e3;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -15,7 +23,7 @@ a {
 
 /* navbar */
 header nav {
-    background-color: #333333;
+    background-color: var(--dark-color);
 }
 
 #navbar {
@@ -29,12 +37,12 @@ header nav {
 }
 
 #navbar a {
-    color: #f5f5f7;
+    color: var(--medium-color);
     transition: .4s;
 }
 
 #navbar a:hover {
-    background-color: #ffffff;
+    background-color: var(--light-color);
 }
 
 #bottom-header {
@@ -48,7 +56,7 @@ header nav {
 }
 
 #bottom-header a {
-    color: #333333;
+    color: var(--dark-color);
 }
 
 #bottom-header-inner {
@@ -65,28 +73,28 @@ header nav {
 
 #bottom-header-inner .btn,
 .btn {
-   background-color: #0071e3; 
+   background-color: var(--accent-color); 
    border-radius: 10rem;
    padding: .4rem 1rem;
-   color: #ffffff;
+   color: var(--light-color);
 }
 
 /* contents */
 #ribbon {
     text-align: center;
     padding: 1rem;
-    background-color: #f5f5f7;
-    color: #1d1d1d;
+    background-color: var(--medium-color);
+    color: var(--extra-dark-color);
     font-size: .8rem; 
 }
 
 #ribbon a {
-    color: #0071e3;
+    color: var(--accent-color);
 }
 
 #main-content {
     text-align: center;
-    color: #1d1d1d;
+    color: var(--extra-dark-color);
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -120,4 +128,71 @@ header nav {
     font-size: 1.1rem;
     padding: 0.8rem 1.4rem;
     align-self: center;
+}
+
+#main-content #product-image {
+    max-width: 1000px;
+    margin: 3rem;
+    opacity: 1;
+    transition: .5s;
+}
+
+#main-content #product-image.changing {
+    opacity: 0.5;
+}
+
+#image-picker {
+    margin-bottom: 500px;
+}
+
+#image-picker ul {
+    display: flex;
+    justify-content: center;
+}
+
+#image-picker li {
+    margin: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    cursor: pointer;
+}
+
+#image-picker li .color {
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50%;
+    box-shadow: 1px 1px 1px;
+    pointer-events: none;
+}
+
+#image-picker li .description {
+    font-size: 0.7rem;
+    color: var(--extra-dark-color);
+    margin-top: 0.6rem;
+}
+
+#green .color {
+    background-color: #394c38;
+}
+
+#silver .color {
+    background-color: #f1f2ed;
+}
+
+#golden .color {
+    background-color: #fae7cf;
+}
+
+#grafite .color {
+    background-color: #54524f;
+}
+
+#blue .color {
+    background-color: #a7c1d9;
+}
+
+.selected {
+    border: 4px solid #ffffff;
+    outline: 2px solid #43a1ff;
 }
