@@ -164,6 +164,7 @@ header nav {
     border-radius: 50%;
     box-shadow: 1px 1px 1px;
     pointer-events: none;
+    border: 4px solid #ffffff;
 }
 
 #image-picker li .description {
